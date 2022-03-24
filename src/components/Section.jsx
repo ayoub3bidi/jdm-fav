@@ -9,9 +9,26 @@ const Wrap = styled.div`
     background-repeat: no-repeat;
     background-image: url('https://i.ibb.co/NjyqSpg/nissan-skyline-gtr-r34.jpg')
 `
+const ItemText = styled.div`
+  padding-top: 15vh;
+  text-align: center;
+`
+const DownArrow = styled.h1`
+  padding-top: 70vh;
+  text-align: center;
+  height: 40px;
+  color: white;
+  animation: animateDown infinite 1.5s;
+`
+
 const Section = () => {
   return (
-    <Wrap>Section</Wrap>
+    <Wrap>
+      <ItemText>
+        <h1 style={{ color: "white" }}>Nissan Skyline GT-R R34</h1>
+      </ItemText>
+      <DownArrow>▼</DownArrow>
+    </Wrap>
   )
 }
 
