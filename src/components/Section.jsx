@@ -7,11 +7,13 @@ const Wrap = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://i.ibb.co/NjyqSpg/nissan-skyline-gtr-r34.jpg')
+    background-image: ${props => `url("${props.bgImage}")`}
 `
 const ItemText = styled.div`
   padding-top: 15vh;
-  text-align: center;
+  padding-right: 40px;
+  text-align: right;
+  text-shadow: 2px 2px 5px blue;
 `
 const DownArrow = styled.h1`
   padding-top: 70vh;
@@ -21,11 +23,11 @@ const DownArrow = styled.h1`
   animation: animateDown infinite 1.5s;
 `
 
-const Section = () => {
+const Section = ({ title, backgroundImg }) => {
   return (
-    <Wrap>
+    <Wrap bgImage={backgroundImg}>
       <ItemText>
-        <h1 style={{ color: "white" }}>Nissan Skyline GT-R R34</h1>
+        <h1 style={{ color: "white" }}>{ title }</h1>
       </ItemText>
       <DownArrow>▼</DownArrow>
     </Wrap>
