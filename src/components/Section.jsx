@@ -13,7 +13,7 @@ const ItemText = styled.div`
   padding-top: 15vh;
   padding-right: 40px;
   text-align: right;
-  text-shadow: 2px 2px 5px blue;
+  text-shadow: 2px 2px 5px yellow;
 `
 const DownArrow = styled.h1`
   padding-top: 70vh;
