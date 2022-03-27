@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
 
 const Wrap = styled.div`
     width: 100vw;
@@ -26,9 +27,11 @@ const DownArrow = styled.h1`
 const Section = ({ title, backgroundImg }) => {
   return (
     <Wrap bgImage={backgroundImg}>
-      <ItemText>
-        <h1 style={{ color: "white" }}>{ title }</h1>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1 style={{ color: "white" }}>{ title }</h1>
+        </ItemText>
+      </Fade>
       <DownArrow>▼</DownArrow>
     </Wrap>
   )
