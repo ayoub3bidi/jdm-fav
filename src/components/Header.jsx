@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { selectCars } from '../features/car/carSlice'
+import { useSelector } from 'react-redux'
 
 const Container = styled.div`
   min-height: 60px;
@@ -34,6 +36,8 @@ const Menu = styled.div`
 `
 
 const Header = () => {
+  const cars = useSelector(selectCars)
+
   return (
     <Container>
       <a>
@@ -41,10 +45,9 @@ const Header = () => {
       </a>
       <Menu>
         <h3>
-          <a href="#">Nissan Skyline GT-R R34 | </a>
-          <a href="#">Subaru Impreza WRX STI | </a>
-          <a href="#">Mitsubishi Lancer EVO 4 | </a>
-          <a href="#">Toyota GT-86</a>
+          {cars && cars.map((car, index) => (
+            <a key={index} href="#">{car} |</a>
+          ))}
         </h3>
       </Menu>
     </Container>
